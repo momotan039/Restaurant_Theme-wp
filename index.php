@@ -1,0 +1,11 @@
+<?php 
+get_header();
+get_template_part('parts/hero');
+get_template_part('parts/service');
+get_template_part('parts/about');
+get_template_part('parts/menu-food');
+get_template_part('parts/reservation');
+get_template_part('parts/team');
+get_template_part('parts/testimonial');
+get_footer()
+?>
