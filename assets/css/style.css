@@ -1,9 +1,9 @@
 /********** Template CSS **********/
-:root {
+/* :root {
     --primary: #FEA116;
     --light: #F1F8FF;
-    --dark: #0F172B;
-}
+    --dark: var(--dark);
+} */
 
 .ff-secondary {
     font-family: 'Pacifico', cursive;
@@ -82,7 +82,47 @@
 
 
 /*** Navbar ***/
-.navbar-dark .navbar-nav .nav-link {
+.navbar-dark .navbar-nav .menu-item-has-children{
+    position: relative;
+}
+.navbar-dark .navbar-nav .menu-item-has-children::after{
+    position: absolute;
+    content: "▼";
+    font-size: 10px;
+    color: #ffffff;
+    top: 5px;
+    right: -10px;
+}
+.navbar-dark .navbar-nav .sub-menu  {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    background: white;
+    padding: 0;
+    display: none;
+}
+.navbar-dark .navbar-nav .menu-item-has-children:hover .sub-menu{
+    display: block;
+}
+.navbar-dark .navbar-nav .sub-menu li{
+    display: block;
+    width: 100%;
+    padding: .25rem 1rem;
+    clear: both;
+    font-weight: 400;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.navbar-dark .navbar-nav .sub-menu li a{
+    color: #212529 !important;
+}
+.navbar-dark .navbar-nav .sub-menu li:hover{
+    color: #1e2125;
+    background-color: #e9ecef;
+}
+.navbar-dark .navbar-nav a  {
     position: relative;
     margin-left: 25px;
     padding: 35px 0;
@@ -94,12 +134,13 @@
     transition: .5s;
 }
 
-.sticky-top.navbar-dark .navbar-nav .nav-link {
+.sticky-top.navbar-dark .navbar-nav a  {
     padding: 20px 0;
 }
 
-.navbar-dark .navbar-nav .nav-link:hover,
-.navbar-dark .navbar-nav .nav-link.active {
+.navbar-dark .navbar-nav a:hover,
+.navbar-dark .navbar-nav a.active,
+.navbar-dark .navbar-nav .current-menu-item a{
     color: var(--primary) !important;
 }
 
@@ -122,8 +163,8 @@
         border-top: 1px solid rgba(255, 255, 255, .1)
     }
 
-    .navbar-dark .navbar-nav .nav-link,
-    .sticky-top.navbar-dark .navbar-nav .nav-link {
+    .navbar-dark .navbar-nav a ,
+    .sticky-top.navbar-dark .navbar-nav a  {
         padding: 10px 0;
         margin-left: 0;
     }
@@ -152,7 +193,6 @@
 
 /*** Hero Header ***/
 .hero-header {
-    background: linear-gradient(rgba(15, 23, 43, .9), rgba(15, 23, 43, .9)), url(../<?php echo get_template_directory_uri(  )?>/assets/img/bg-hero.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -237,7 +277,7 @@
     position: relative;
     height: 100%;
     min-height: 500px;
-    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1)), url(../<?php echo get_template_directory_uri(  )?>/assets/img/video.jpg);
+    background: linear-gradient(rgba(15, 23, 43, .1), rgba(15, 23, 43, .1));
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
