@@ -2,6 +2,7 @@
 //setup theme
 function theme_setup() {
     add_theme_support('post-thumbnails'); // Enable featured images
+    register_nav_menu('header-menu', __('Header Menu'));//enable menu 
 }
 add_action('after_setup_theme', 'theme_setup');
 
@@ -39,3 +40,6 @@ function js_enqueue_scripts() {
 
 }
 add_action('wp_enqueue_scripts', 'js_enqueue_scripts');
+
+// load theme settings
+require_once get_template_directory() . '/inc/theme-settings.php';
