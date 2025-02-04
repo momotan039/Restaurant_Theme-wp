@@ -7,7 +7,7 @@ This WordPress theme is designed specifically for **restaurants, cafés, and foo
 
 ## 🔗 Live Demo & Documentation  
 
-🌐 **Live Demo:** [ Link Here]  
+🌐 **Live Demo:** [Review](https://mohamad-taha.com/portfolio/wordpress/restaurant-wp/)
 
 ---
 
